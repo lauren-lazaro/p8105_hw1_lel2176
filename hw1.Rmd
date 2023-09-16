@@ -11,23 +11,24 @@ library(moderndive)
 data("early_january_weather")
 ```
 
-the variables in this data set include `r origin`, `r year`, `r month`, `r day`,
-`r hour`, `r temp`, `r dewp`, `r humid`, `r humid`, `r wind_dir`, `r wind_speed`,
-`r wind_gust`, `r precip`, `r pressure`, `r visib`. the size of the data set is:
-`r nrow(358)` and `r ncol(15)`. the mean temperature of the data is: 
-`r mean(early_january_weather[["temp]]` which is equal to 39.58212.
 
 ```{r}
 weather_scat = ggplot(early_january_weather, aes(x = time_hour, y  = temp, color = "humid")) + geom_point()
+weather_scat
 ggsave("weather_scat.pdf")
 ```
 
-the scatter plot `r weather_scat` shows the relationship between time measure by
-hours and the recorded temperature. when analyzing the graph there is a clear
-sinusoidal wave pattern that repeats everyday. these waves represents the highs and
-lows of daily temperature with the temperature peaking midday and dropping during
-the night when the sun is gone. however, the overall trend of the line has an 
-increasing slope showing that the temperature is slowly increasing as the days go
-on.
 
 # Problem 2
+
+```{r}
+plot_df = 
+  tibble(
+    x = rnorm(10),
+    vec_logical = c(x>0),
+    vec_char = c("Child", "Adult", "Old Age", "Old Age", "Adult", "Old Age",
+                 "Child", "Adult", "Adult", "Child"),
+    vec_fact = factor(vec_char, levels = c("Child", "Adult", "Old Age"))
+  )
+```
+
