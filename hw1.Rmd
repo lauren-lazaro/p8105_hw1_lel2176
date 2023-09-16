@@ -1,6 +1,6 @@
 ---
 title: "P8104 HW 1 LEL2176"
-output: html_document
+output: github_document
 ---
 
 I'm an R Markdown document! 
