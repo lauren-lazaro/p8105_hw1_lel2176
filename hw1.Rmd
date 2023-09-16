@@ -18,5 +18,16 @@ the variables in this data set include `r origin`, `r year`, `r month`, `r day`,
 `r mean(early_january_weather[["temp]]` which is equal to 39.58212.
 
 ```{r}
-ggplot(early_january_weather, aes(x = time_hour, y  = temp, color = "humid")) + geom_point()
+weather_scat = ggplot(early_january_weather, aes(x = time_hour, y  = temp, color = "humid")) + geom_point()
+ggsave("weather_scat.pdf")
 ```
+
+the scatter plot `r weather_scat` shows the relationship between time measure by
+hours and the recorded temperature. when analyzing the graph there is a clear
+sinusoidal wave pattern that repeats everyday. these waves represents the highs and
+lows of daily temperature with the temperature peaking midday and dropping during
+the night when the sun is gone. however, the overall trend of the line has an 
+increasing slope showing that the temperature is slowly increasing as the days go
+on.
+
+# Problem 2
