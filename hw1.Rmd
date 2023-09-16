@@ -1,0 +1,14 @@
+---
+title: "P8104 HW 1 LEL2176"
+output: html_document
+---
+
+I'm an R Markdown document! 
+
+# Section 1
+
+Here's a **code chunk** that:
+
+```{r}
+
+```
